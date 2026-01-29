@@ -3,9 +3,9 @@ import ScienceIcon from '@mui/icons-material/Science';
 import './AboutUs.css';
 
 // Import images
-import Company from '../assests/Company.jpg';
-import Facility from '../assests/Facility.jpg';
-import Research from '../assests/Research.jpg';
+import Company from '../assets/Company.jpg';
+import Facility from '../assets/Facility.jpg';
+import Research from '../assets/Research.jpg';
 
 export default function AboutUs() {
   return (
@@ -101,7 +101,7 @@ export default function AboutUs() {
       ===================== */}
       <div className="about-gallery">
         <div className="gallery-item">
-          <img src={Company} alt="Company Entrance" />
+          <img src={Facility} alt="Company Entrance" />
           <span>Company Premises</span>
         </div>
 

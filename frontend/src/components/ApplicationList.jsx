@@ -1,15 +1,26 @@
 import './ApplicationList.css'
 import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 
+// Import images
+import automotive from '../assets/automotive.png'
+import decorative from '../assets/decorative.png'
+import wood from '../assets/woodCoating.png'
+import coil from '../assets/coilCoating.png'
+import inks from '../assets/Ink.png'
+import floor from '../assets/floorCoating.png'
+import adhesives from '../assets/Adhesives.png'
+import construction from '../assets/Contruction.png'
+
+
 const applications = [
-  { title: 'Automotive Paints', image: '/assests/automotive.png' },
-  { title: 'Decorative Paints', image: '/applications/decorative.png' },
-  { title: 'Wood Coatings', image: '/applications/woodCoating.png' },
-  { title: 'Coil Coatings', image: '/applications/coil.png' },
-  { title: 'Inks', image: '/applications/inks.png' },
-  { title: 'Floor Coatings', image: '/applications/floor.png' },
-  { title: 'Adhesives', image: '/applications/adhesives.png' },
-  { title: 'Construction Chemicals', image: '/applications/construction.png' },
+{ title: 'Automotive Paints', image: automotive },
+{ title: 'Decorative Paints', image: decorative },
+{ title: 'Wood Coatings', image: wood },
+{ title: 'Coil Coatings', image: coil },
+{ title: 'Inks', image: inks },
+{ title: 'Floor Coatings', image: floor },
+{ title: 'Adhesives', image: adhesives },
+{ title: 'Construction Chemicals', image: construction },
 ]
 
 export default function Applications() {
