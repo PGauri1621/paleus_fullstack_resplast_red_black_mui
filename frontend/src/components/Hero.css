@@ -1,0 +1,32 @@
+.hero {
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+}
+
+.hero-box {
+  background: white;
+  padding: 3rem;
+  max-width: 620px;
+  border-left: 6px solid var(--primary);
+}
+
+.hero-box h1 {
+  font-size: var(--h1);
+  color: var(--black);
+  line-height: 1.25;
+}
+
+.hero-box button {
+  margin-top: 1.6rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

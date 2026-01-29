@@ -1,0 +1,31 @@
+.products {
+  padding: 5rem 6rem;
+  background: #fafafa;
+}
+
+.products h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.product-list {
+  max-width: 900px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li {
+  font-size: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .products {
+    padding: 3rem 2rem;
+  }
+}

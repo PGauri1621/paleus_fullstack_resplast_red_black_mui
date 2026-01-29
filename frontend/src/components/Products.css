@@ -1,0 +1,19 @@
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 5rem 6rem;
+  background: var(--bg-light);
+}
+
+.mui-card {
+  border-top: 6px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card-title {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
