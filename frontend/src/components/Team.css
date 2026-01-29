@@ -1,35 +1,75 @@
 .team {
-  padding: 5rem 6rem;
+  padding: 5.5rem 0;
   background: #fafafa;
 }
 
-.team h2 {
-  font-size: 2rem;
+/* Header */
+.team-header {
+  max-width: 760px;
+  margin-bottom: 4rem;
+}
+
+.team-header h2 {
+  color: var(--primary);
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
-.director-card {
-  max-width: 400px;
-  padding: 2rem;
-  border: 1px solid #e0e0e0;
-  background: #ffffff;
+.team-header p {
+  color: var(--body);
+  line-height: 1.6;
 }
 
-.director-card h3 {
-  font-size: 1.2rem;
+/* Director */
+.director-card img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.director-content h3 {
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
+  color: var(--black);
 }
 
-.director-card p {
+.director-role {
+  display: block;
+  margin-bottom: 1.2rem;
   font-size: 0.95rem;
-  color: #555;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.director-content p {
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  color: var(--body);
+}
+
+/* Award */
+.award-content h4 {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--black);
+}
+
+.award-content p {
+  line-height: 1.6;
+  color: var(--body);
+}
+
+.award-card img {
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .team {
-    padding: 3rem 2rem;
+    padding: 3.5rem 0;
+  }
+
+  .team-header {
+    margin-bottom: 3rem;
   }
 }
