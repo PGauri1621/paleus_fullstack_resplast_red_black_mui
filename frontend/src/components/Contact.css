@@ -102,6 +102,24 @@
 .contact-submit:hover {
   opacity: 0.9;
 }
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-status.success {
+  color: #1b7f3b;
+}
+
+.form-status.error {
+  color: #c4161c;
+}
+
+.contact-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {

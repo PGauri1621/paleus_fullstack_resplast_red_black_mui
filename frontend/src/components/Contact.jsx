@@ -9,6 +9,12 @@ export default function Contact() {
     message: '',
   })
 
+  const [status, setStatus] = useState({
+    loading: false,
+    success: null,
+    message: '',
+  })
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,18 +22,48 @@ export default function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setStatus({ loading: true, success: null, message: '' })
 
-    // 🔗 Backend integration point
-    // Example:
-    // fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData),
-    // })
+    try {
+      const response = await fetch(
+        'http://localhost:5000/api/contact',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }
+      )
 
-    console.log('Form submitted:', formData)
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong')
+      }
+
+      setStatus({
+        loading: false,
+        success: true,
+        message: 'Thank you! Your message has been sent successfully.',
+      })
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      })
+    } catch (error) {
+      setStatus({
+        loading: false,
+        success: false,
+        message:
+          error.message ||
+          'Unable to send message. Please try again later.',
+      })
+    }
   }
 
   return (
@@ -89,6 +125,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={status.loading}
             />
           </div>
 
@@ -100,6 +137,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={status.loading}
             />
           </div>
 
@@ -110,6 +148,7 @@ export default function Contact() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              disabled={status.loading}
             />
           </div>
 
@@ -121,12 +160,28 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
+              disabled={status.loading}
             />
           </div>
 
-          <button type="submit" className="contact-submit">
-            Submit Inquiry
+          <button
+            type="submit"
+            className="contact-submit"
+            disabled={status.loading}
+          >
+            {status.loading ? 'Sending...' : 'Submit Inquiry'}
           </button>
+
+          {/* Feedback message */}
+          {status.message && (
+            <p
+              className={`form-status ${
+                status.success ? 'success' : 'error'
+              }`}
+            >
+              {status.message}
+            </p>
+          )}
         </form>
       </div>
     </section>
