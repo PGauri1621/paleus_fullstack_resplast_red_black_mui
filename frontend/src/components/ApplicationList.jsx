@@ -9,7 +9,7 @@ import coil from '../assets/coilCoating.png'
 import inks from '../assets/Ink.png'
 import floor from '../assets/floorCoating.png'
 import adhesives from '../assets/Adhesives.png'
-import construction from '../assets/Contruction.png'
+import construction from '../assets/construction.png'
 
 
 const applications = [
