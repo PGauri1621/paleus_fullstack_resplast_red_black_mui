@@ -3,7 +3,7 @@ import './Products.css'
 
 const productResources = [
   {
-    title: 'Product Brochures',
+    title: 'Products',
     description:
       'Comprehensive brochures outlining our product portfolio, applications, performance characteristics and industry usage.',
   },
