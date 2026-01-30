@@ -1,42 +1,121 @@
 .contact {
-  padding: 5rem 6rem;
+  padding: 5.5rem 6rem;
   background: #ffffff;
   color: var(--black);
 }
 
-.contact h2 {
+/* Header */
+.contact-header {
+  max-width: 720px;
+  margin-bottom: 3.5rem;
+}
+
+.contact-header h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
 }
 
-.contact p {
+.contact-header p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
-  margin-bottom: 1.5rem;
+  color: var(--body);
 }
 
-/* Emphasis for section labels */
-.contact strong {
+/* Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+}
+
+/* Info section */
+.contact-info .info-block {
+  margin-bottom: 2rem;
+}
+
+.contact-info strong {
   display: block;
   font-weight: 600;
-  color: var(--black);
   margin-bottom: 0.4rem;
+  color: var(--black);
 }
 
-/* Spacing between address blocks */
-.contact p + p {
-  margin-top: 1.8rem;
+.contact-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Form */
+.contact-form {
+  background: #fafafa;
+  padding: 2.5rem;
+  border: 1px solid #e5e5e5;
+}
+
+.contact-form h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: var(--black);
+}
+
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--black);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.contact-submit {
+  margin-top: 1rem;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  opacity: 0.9;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
   .contact {
-    padding: 3rem 2rem;
+    padding: 3.5rem 2rem;
   }
 
-  .contact h2 {
-    font-size: 1.6rem;
+  .contact-header {
+    margin-bottom: 2.5rem;
   }
 }

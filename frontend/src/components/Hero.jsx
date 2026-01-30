@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import './Hero.css'
 import hero from '../assets/hero.png'
 
 export default function Hero() {
+  const navigate = useNavigate()
+
   return (
     <section
       className="hero"
@@ -17,7 +20,14 @@ export default function Hero() {
           Delivering environmentally sustainable acrylic polymer system
           solutions
         </h1>
-        <button>Get in touch with us</button>
+
+        {/* Button navigation */}
+        <button
+          className="hero-btn"
+          onClick={() => navigate('/contact')}
+        >
+          Get in touch with us
+        </button>
       </div>
     </section>
   )

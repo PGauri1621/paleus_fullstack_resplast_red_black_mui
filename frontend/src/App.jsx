@@ -7,10 +7,12 @@ import ApplicationsPage from './pages/ApplicationsPage';
 //import IndustriesPage from './pages/IndustriesPage';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />

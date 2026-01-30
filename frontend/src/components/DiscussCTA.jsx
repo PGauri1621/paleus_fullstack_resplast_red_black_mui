@@ -1,5 +1,6 @@
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import '../styles/DiscussCTA.css';
+import { Link } from 'react-router-dom'
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'
+import '../styles/DiscussCTA.css'
 
 export default function DiscussCTA() {
   return (
@@ -10,11 +11,12 @@ export default function DiscussCTA() {
           would like to discuss?
         </h2>
 
-        <button className="discuss-btn">
+        {/* Navigate to Contact page */}
+        <Link to="/contact" className="discuss-btn">
           Get in touch with us
           <ChatBubbleOutlineIcon className="discuss-icon" />
-        </button>
+        </Link>
       </div>
     </section>
-  );
+  )
 }
