@@ -9,6 +9,7 @@ import {
 import DownloadIcon from '@mui/icons-material/Download'
 import './ProductList.css'
 
+/* ---------------- BROCHURES ---------------- */
 const productBrochures = [
   {
     title: 'Acrylic Resins',
@@ -138,15 +139,79 @@ const productBrochures = [
   },
 ]
 
+
+/* ---------------- TECHNICAL DATA SHEETS ---------------- */
+const technicalDataSheets = [
+  {
+    title: 'DSP TPA 03 – 50%',
+    description:
+      'Acrylic polymer emulsion with 50% solid content designed for water-based coatings and inks.',
+    pdf: '/tds pdf/tds - 1.pdf',
+  },
+  {
+    title: 'DSP TPA 04 – 60%',
+    description:
+      'High-solid acrylic polymer emulsion suitable for demanding coating applications.',
+    pdf: '/tds pdf/tds - 2.pdf',
+  },
+  {
+    title: 'DSP 5081 – WAXSOL',
+    description:
+      'Wax dispersion additive developed for surface protection and performance enhancement.',
+    pdf: '/tds pdf/tds - 3.pdf',
+  },
+  {
+    title: 'DSP PU 09',
+    description:
+      'Polyurethane resin formulated for specialty industrial applications.',
+    pdf: '/tds pdf/tds - 4.pdf',
+  },
+  {
+    title: 'DSP PU 05',
+    description:
+      'PU resin system designed for coatings and adhesive formulations.',
+    pdf: '/tds pdf/tds - 5.pdf',
+  },
+  {
+    title: 'DSP PU 06',
+    description:
+      'High-performance polyurethane resin for industrial use.',
+    pdf: '/tds pdf/tds - 6.pdf',
+  },
+  {
+    title: 'DSP N 75',
+    description:
+      'Aliphatic polyurethane hardener offering excellent weather and UV resistance.',
+    pdf: '/tds pdf/tds - 7.pdf',
+  },
+  {
+    title: 'DSP L 75 – HV',
+    description:
+      'High-viscosity aromatic polyurethane hardener for durable coating systems.',
+    pdf: '/tds pdf/tds - 8.pdf',
+  },
+   {
+    title: 'DSP L 75 – HV',
+    description:
+      'High-viscosity aromatic polyurethane hardener for durable coating systems.',
+    pdf: '/tds pdf/tds - 9.pdf',
+  },
+]
+
 export default function ProductList() {
   const [activeTab, setActiveTab] = useState('brochures')
   const [visibleCount, setVisibleCount] = useState(6)
+  const [tdsVisibleCount, setTdsVisibleCount] = useState(4)
   const [loading, setLoading] = useState(false)
 
-  const handleLoadMore = () => {
+  const handleLoadMore = (type) => {
     setLoading(true)
     setTimeout(() => {
-      setVisibleCount((prev) => prev + 6)
+      if (type === 'brochures') {
+        setVisibleCount((prev) => prev + 6)
+      } else {
+        setTdsVisibleCount((prev) => prev + 4)
+      }
       setLoading(false)
     }, 700)
   }
@@ -178,6 +243,7 @@ export default function ProductList() {
 
       {/* Content */}
       <Box className="products-content">
+        {/* ---------- BROCHURES ---------- */}
         {activeTab === 'brochures' &&
           productBrochures.slice(0, visibleCount).map((item, index) => (
             <Paper key={index} className="product-card" elevation={0}>
@@ -203,25 +269,59 @@ export default function ProductList() {
             </Paper>
           ))}
 
-        {/* Load more */}
         {activeTab === 'brochures' &&
           visibleCount < productBrochures.length && (
             <Box className="load-more">
               {loading ? (
                 <CircularProgress size={26} />
               ) : (
-                <Button onClick={handleLoadMore}>
+                <Button onClick={() => handleLoadMore('brochures')}>
                   Load more
                 </Button>
               )}
             </Box>
           )}
 
-        {activeTab === 'tds' && (
-          <Typography variant="body1">
-            Technical Data Sheets will be available here.
-          </Typography>
-        )}
+        {/* ---------- TDS ---------- */}
+        {activeTab === 'tds' &&
+          technicalDataSheets
+            .slice(0, tdsVisibleCount)
+            .map((item, index) => (
+              <Paper key={index} className="product-card" elevation={0}>
+                <Box className="product-left">
+                  <Typography variant="h6">{item.title}</Typography>
+                  <Typography variant="body2">
+                    {item.description}
+                  </Typography>
+                </Box>
+
+                <Button
+                  variant="outlined"
+                  startIcon={<DownloadIcon />}
+                  className="download-btn"
+                  component="a"
+                  href={item.pdf}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download PDF
+                </Button>
+              </Paper>
+            ))}
+
+        {activeTab === 'tds' &&
+          tdsVisibleCount < technicalDataSheets.length && (
+            <Box className="load-more">
+              {loading ? (
+                <CircularProgress size={26} />
+              ) : (
+                <Button onClick={() => handleLoadMore('tds')}>
+                  Load more
+                </Button>
+              )}
+            </Box>
+          )}
       </Box>
     </Box>
   )

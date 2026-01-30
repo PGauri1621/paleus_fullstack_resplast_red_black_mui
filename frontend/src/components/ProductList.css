@@ -1,11 +1,9 @@
-/* Page layout */
 .products-page {
   display: flex;
   padding: 5rem 6rem;
   background: #f6f6f6;
 }
 
-/* Sidebar */
 .products-sidebar {
   width: 260px;
   margin-right: 3.5rem;
@@ -14,20 +12,10 @@
 .sidebar-card {
   background: #ffffff;
   border-radius: 6px;
-  padding: 1.6rem 1.4rem;
+  padding: 1.2rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-.sidebar-heading {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #888;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 1.2rem;
-}
-
-/* Sidebar links */
 .sidebar-link {
   padding: 0.75rem 1rem;
   margin-bottom: 0.4rem;
@@ -36,6 +24,10 @@
   cursor: pointer;
   color: #333;
   transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:last-child {
+  margin-bottom: 0;
 }
 
 .sidebar-link:hover {
@@ -48,12 +40,10 @@
   font-weight: 600;
 }
 
-/* Content */
 .products-content {
   flex: 1;
 }
 
-/* Product card */
 .product-card {
   display: flex;
   justify-content: space-between;
@@ -63,11 +53,6 @@
   border-radius: 6px;
   border: 1px solid #e5e5e5;
   background: #ffffff;
-  transition: box-shadow 0.2s ease;
-}
-
-.product-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .product-left h6 {
@@ -81,7 +66,6 @@
   max-width: 540px;
 }
 
-/* Download button */
 .download-btn {
   color: #c4161c !important;
   border-color: #c4161c !important;
@@ -91,7 +75,6 @@
   background: rgba(196, 22, 28, 0.05);
 }
 
-/* Load more */
 .load-more {
   margin-top: 2.5rem;
   text-align: center;
@@ -102,7 +85,6 @@
   font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .products-page {
     flex-direction: column;
@@ -117,10 +99,5 @@
   .sidebar-card {
     display: flex;
     gap: 1.5rem;
-    align-items: center;
-  }
-
-  .sidebar-heading {
-    margin-bottom: 0;
   }
 }
