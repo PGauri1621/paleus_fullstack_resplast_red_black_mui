@@ -1,31 +1,16 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import './Products.css'
 
-const productCategories = [
+const productResources = [
   {
-    title: 'PU Resins & Adhesives',
-    image: 'https://images.unsplash.com/photo-1581092919534-1b6c8f07b7b3',
+    title: 'Product Brochures',
     description:
-      'PU resins, PU adhesives (1K), PU paints, clear coats and specialty polyurethane systems for industrial and coating applications.',
+      'Comprehensive brochures outlining our product portfolio, applications, performance characteristics and industry usage.',
   },
   {
-    title: 'Epoxy Systems',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b',
+    title: 'Technical Data Sheets',
     description:
-      'Epoxy polyamide hardeners, cycloaliphatic hardeners, epoxy adhesives, grouts and high-performance epoxy solutions.',
-  },
-  {
-    title: 'Acrylics & Emulsions',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758',
-    description:
-      'Acrylic resins, emulsions, binders, pressure-sensitive adhesives, thickeners and water-based acrylic systems.',
-  },
-  {
-    title: 'Alkyd & Polyester Resins',
-    image: 'https://images.unsplash.com/photo-1581093458791-9c7c7df6b3b4',
-    description:
-      'Alkyd resins, UPR & saturated polyester resins used in industrial coatings, paints and specialty applications.',
+      'Detailed technical specifications including chemical properties, performance data, handling guidelines and application parameters.',
   },
 ]
 
@@ -34,38 +19,33 @@ export default function Products() {
 
   return (
     <section className="products">
-      <div className="products-header">
-        <h2>Product Categories</h2>
-        <p>
-          Our manufacturing portfolio covers a wide range of specialty resin
-          systems engineered for performance, durability and application
-          flexibility across industries.
-        </p>
-      </div>
+      <div className="products-inner">
+        <div className="products-header">
+          <h2>Product Information</h2>
+          <p>
+            Access detailed product documentation to support evaluation,
+            specification and application of our specialty polymer systems.
+          </p>
+        </div>
 
-      <div className="products-grid">
-        {productCategories.map((item) => (
-          <Card
-            key={item.title}
-            className="mui-card"
-            onClick={() => navigate('/products')}
-          >
-            <CardMedia
-              component="img"
-              height="220"
-              image={item.image}
-              alt={item.title}
-            />
-            <CardContent>
-              <Typography variant="h5" className="card-title">
-                {item.title}
-              </Typography>
-              <Typography variant="body2">
-                {item.description}
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
+        <div className="products-list">
+          {productResources.map((item) => (
+            <div
+              key={item.title}
+              className="product-row"
+              onClick={() => navigate('/products')}
+            >
+              <div className="product-text">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+
+              <div className="product-action">
+                <span>Find out more →</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

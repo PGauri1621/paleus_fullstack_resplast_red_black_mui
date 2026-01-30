@@ -1,12 +1,17 @@
+/* Section background */
 .products {
+  background: #f6f6f6;
+}
+
+/* Inner container */
+.products-inner {
   padding: 5.5rem 6rem;
-  background: var(--bg-light);
 }
 
 /* Header */
 .products-header {
   max-width: 760px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .products-header h2 {
@@ -19,48 +24,72 @@
 .products-header p {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--body);
+  color: #333333;
 }
 
-/* Grid */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
+/* List container */
+.products-list {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
 }
 
-/* Cards */
-.mui-card {
-  border-top: 6px solid var(--primary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+/* Row */
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: background 0.2s ease;
 }
 
-.mui-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+.product-row:last-child {
+  border-bottom: none;
 }
 
-.card-title {
-  color: var(--primary);
+.product-row:hover {
+  background: #fafafa;
+}
+
+/* Left text */
+.product-text h3 {
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  color: #111111;
+  margin-bottom: 0.4rem;
+}
+
+.product-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444444;
+  max-width: 720px;
+}
+
+/* Right CTA */
+.product-action span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--primary);
+  white-space: nowrap;
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 900px) {
+  .product-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .product-action {
+    align-self: flex-end;
   }
 }
 
 @media (max-width: 600px) {
-  .products {
+  .products-inner {
     padding: 3.5rem 2rem;
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr;
   }
 }
