@@ -1,32 +1,48 @@
 .hero {
-  height: 90vh;
+  height: 55vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding-left: 6rem;
+  padding-left: 4rem;
 }
 
+/* Hero card – FINAL BALANCED SIZE */
 .hero-box {
   background: white;
-  padding: 3rem;
-  max-width: 620px;
-  border-left: 6px solid var(--primary);
+  padding: 2.8rem;              /* ⬆ slight increase */
+  max-width: 480px;             /* ⬆ increased from 420px */
+  border-left: 5px solid var(--primary);
 }
 
+/* Heading */
 .hero-box h1 {
-  font-size: var(--h1);
+  font-size: 1.8rem;            /* ⬆ very slight bump */
   color: var(--black);
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
-.hero-box button {
+/* Button */
+.hero-btn {
   margin-top: 1.6rem;
   background: var(--primary);
   color: white;
   border: none;
-  padding: 0.9rem 1.8rem;
-  font-size: 1rem;
+  padding: 0.85rem 1.7rem;
+  font-size: 0.95rem;
   cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 2rem;
+    height: 50vh;
+  }
+
+  .hero-box {
+    max-width: 100%;
+    padding: 2.2rem;
+  }
 }

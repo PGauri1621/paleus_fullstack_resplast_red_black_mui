@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import './Hero.css'
-import hero from '../assets/hero.png'
+import hero from '../assets/hero.jpg'
 
 export default function Hero() {
   const navigate = useNavigate()
@@ -21,7 +21,6 @@ export default function Hero() {
           solutions
         </h1>
 
-        {/* Button navigation */}
         <button
           className="hero-btn"
           onClick={() => navigate('/contact')}
