@@ -4,7 +4,6 @@
   background: #f6f6f6;
 }
 
-/* Sidebar */
 .products-sidebar {
   width: 260px;
   margin-right: 3.5rem;
@@ -24,6 +23,15 @@
   border-radius: 4px;
   cursor: pointer;
   color: #333;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-link:hover {
+  background: #f5f5f5;
 }
 
 .sidebar-link.active {
@@ -32,7 +40,6 @@
   font-weight: 600;
 }
 
-/* Content */
 .products-content {
   flex: 1;
 }
@@ -41,26 +48,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 2rem;
+  padding: 1.7rem 2rem;
   margin-bottom: 1.4rem;
   border-radius: 6px;
   border: 1px solid #e5e5e5;
   background: #ffffff;
 }
 
-.product-card h6 {
+.product-left h6 {
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   color: #c4161c;
 }
 
-.product-card p {
+.product-left p {
   color: #555;
-  max-width: 720px;
-  line-height: 1.6;
+  max-width: 540px;
 }
 
-/* Download button (TDS only) */
 .download-btn {
   color: #c4161c !important;
   border-color: #c4161c !important;
@@ -70,7 +75,6 @@
   background: rgba(196, 22, 28, 0.05);
 }
 
-/* Load more */
 .load-more {
   margin-top: 2.5rem;
   text-align: center;
@@ -81,7 +85,6 @@
   font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .products-page {
     flex-direction: column;
@@ -96,11 +99,5 @@
   .sidebar-card {
     display: flex;
     gap: 1.5rem;
-  }
-
-  .product-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
   }
 }
