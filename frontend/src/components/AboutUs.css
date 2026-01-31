@@ -9,34 +9,30 @@
 ========================= */
 .about-header {
   max-width: 900px;
-  margin-bottom: 2.2rem; /* FIXED: reduced excessive gap */
+  margin-bottom: 2.5rem;
 }
 
 .about-eyebrow {
-  display: inline-block;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--primary);
-  margin-bottom: 0.6rem;
 }
 
 .about-header h2 {
   font-size: 2.2rem;
   font-weight: 600;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-  position: relative;
+  margin: 0.6rem 0 1rem;
 }
 
 .about-header h2::after {
-  content: "";
+  content: '';
   width: 64px;
   height: 3px;
   background: var(--primary);
   display: block;
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
 }
 
 .about-intro {
@@ -46,22 +42,71 @@
 }
 
 /* =========================
-   Content (SPACING FIX)
+   Company Content
 ========================= */
 .about-content {
   max-width: 1000px;
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 .about-content p {
   font-size: 1rem;
   line-height: 1.7;
   color: #444;
-  margin-bottom: 1.1rem; /* FIXED: tighter paragraph spacing */
+  margin-bottom: 1.1rem;
 }
 
-.about-content p:first-child {
-  margin-top: 0;
+/* =========================
+   Vision & Mission (Distinct)
+========================= */
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.vm-card {
+  padding: 3rem;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  background: linear-gradient(135deg, #ffffff, #fafafa);
+}
+
+.vm-card svg {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.vm-card h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.vm-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Vision */
+.vm-card.vision {
+  border-left: 6px solid var(--primary);
+}
+
+.vm-card.vision svg {
+  color: var(--primary);
+}
+
+/* Mission */
+.vm-card.mission {
+  border-left: 6px solid var(--primary);
+  background: #fdfdfd;
+}
+
+.vm-card.mission svg {
+  color: var(--primary);
 }
 
 /* =========================
@@ -79,15 +124,8 @@
   border: 1px solid #e4e4e4;
   border-radius: 8px;
   padding: 2.6rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.facility-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Red section heading */
 .facility-section-title {
   font-size: 0.75rem;
   font-weight: 600;
@@ -105,8 +143,8 @@
 }
 
 .facility-header svg {
-  color: var(--primary);
   font-size: 2.2rem;
+  color: var(--primary);
 }
 
 .facility-header h3 {
@@ -116,7 +154,6 @@
 
 .facility-card ul {
   padding-left: 1.2rem;
-  margin: 0;
 }
 
 .facility-card li {
@@ -125,26 +162,6 @@
   margin-bottom: 0.6rem;
 }
 
-/* =========================
-   Gallery
-========================= */
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.gallery-placeholder {
-  height: 230px;
-  background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
-  border: 1px dashed #bbb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: #666;
-  text-transform: uppercase;
-}
 /* =========================
    Gallery
 ========================= */
@@ -171,7 +188,6 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
-  display: block;
 }
 
 .gallery-item span {
@@ -183,25 +199,12 @@
   text-align: center;
   background: #fafafa;
 }
-.about p {
-    color: black;
-    max-width: 700px;
-}
-
-
 
 /* =========================
    Responsive
 ========================= */
 @media (max-width: 1024px) {
-  .about-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================
-   Responsive
-========================= */
-@media (max-width: 1024px) {
+  .vision-mission,
   .facility-grid,
   .about-gallery {
     grid-template-columns: 1fr;
@@ -215,5 +218,9 @@
 
   .about-header h2 {
     font-size: 1.8rem;
+  }
+
+  .vm-card {
+    padding: 2.2rem;
   }
 }

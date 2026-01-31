@@ -1,57 +1,80 @@
-import FactoryIcon from '@mui/icons-material/Factory';
-import ScienceIcon from '@mui/icons-material/Science';
-import './AboutUs.css';
+import FactoryIcon from '@mui/icons-material/Factory'
+import ScienceIcon from '@mui/icons-material/Science'
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import FlagIcon from '@mui/icons-material/Flag'
+import './AboutUs.css'
 
-// Import images
-import Company from '../assets/Company.jpg';
-import Facility from '../assets/Facility.jpg';
-import Research from '../assets/Research.jpg';
+// Images
+import Company from '../assets/Company.jpg'
+import Facility from '../assets/Facility.jpg'
+import Research from '../assets/Research.jpg'
 
 export default function AboutUs() {
   return (
     <section className="about">
       {/* =====================
-          Header Section
+          Header
       ===================== */}
       <div className="about-header">
         <span className="about-eyebrow">About Us</span>
-
         <h2>Divija Speciality Polymers</h2>
 
         <p className="about-intro">
-          Divija Speciality Polymers is a leading manufacturer of specialty polymers
-          and industrial resins, serving customers with high-quality products and
-          dependable technical support.
+          Divija Speciality Polymers is a specialty resin manufacturing company
+          delivering high-quality polymer systems for decorative, industrial,
+          and specialty coating applications.
         </p>
       </div>
 
       {/* =====================
-          Description
+          Company Overview
       ===================== */}
       <div className="about-content">
         <p>
-          We manufacture Synthetic Resins, Aromatic & Aliphatic PU Hardeners, Blocked
-          Isocyanides, Epoxy Hardeners, Paints, Primers, Lacquers, PU Clear Coats,
-          Emulsions, Thickeners, Additives, Epoxy & PU Adhesives and other specialty
-          products.
+          We manufacture a comprehensive range of <strong>synthetic resins</strong>,
+          including Aromatic & Aliphatic PU Hardeners, Blocked Isocyanides,
+          Epoxy Hardeners, Acrylics, Alkyds, Emulsions, Thickeners, Additives,
+          Industrial Paints, Clear Coats, and Epoxy & PU Adhesives.
         </p>
 
         <p>
-          Our manufacturing facility is located at <strong>Khudus near Akluj</strong>.
-          We are well known in the industrial resins and specialty polymers industry
-          for quality products and dependable service.
+          Our manufacturing facility is located at <strong>Khudus near Akluj,
+          Maharashtra</strong>. Established on <strong>09 August 2021</strong>,
+          we are recognised for consistent product quality, technical expertise,
+          and dependable customer support.
         </p>
 
         <p>
-          We are an <strong>ISO 9001:2008 certified company</strong> with fully equipped
-          R&amp;D and Quality Control laboratories. We specialise in developing
-          tailor-made products as per end-user requirements.
+          Divija Speciality Polymers operates as an
+          <strong> ISO 9001 certified company</strong>, supported by in-house
+          Research & Development and Quality Control laboratories.
         </p>
+      </div>
 
-        <p>
-          <strong>Company Establishment:</strong> 09 August 2021.  
-          Divija Speciality Polymers is a single-owner firm operating since Aug 2021.
-        </p>
+      {/* =====================
+          Vision & Mission (DISTINCT STYLE)
+      ===================== */}
+      <div className="vision-mission">
+        <div className="vm-card vision">
+          <VisibilityIcon />
+          <h3>Our Vision</h3>
+          <p>
+            To establish Divija Speciality Polymers as a trusted resin
+            manufacturing company recognised for quality, innovation,
+            and responsible growth across domestic and global markets.
+          </p>
+        </div>
+
+        <div className="vm-card mission">
+          <FlagIcon />
+          <h3>Our Mission</h3>
+          <p>
+            To design and manufacture reliable polymer systems through
+            continuous improvement, disciplined processes, and close
+            collaboration with customers—delivering consistent performance
+            and long-term value.
+          </p>
+        </div>
       </div>
 
       {/* =====================
@@ -70,15 +93,14 @@ export default function AboutUs() {
             <li>SS316 Jacketed Reactor – 300 kg capacity</li>
             <li>Pilot Plant Glass Reactor – 350 kg</li>
             <li>SS316 Mixing Tank – 150 kg with VFD</li>
-            <li>High Speed Dispersers</li>
-            <li>Bead Mills – 200 kg, 50 kg, 20 kg & 1 L</li>
-            <li>Cooling Tower – 100 TR</li>
-            <li>Semi-auto filling machines – 30 g to 1 L</li>
+            <li>High-speed dispersers and bead mills</li>
+            <li>Cooling tower – 100 TR</li>
+            <li>Semi-automatic filling machines (30 g to 1 L)</li>
           </ul>
         </div>
 
         <div className="facility-card">
-          <div className="facility-section-title">Research &amp; Development</div>
+          <div className="facility-section-title">Research & Development</div>
 
           <div className="facility-header">
             <ScienceIcon />
@@ -87,21 +109,19 @@ export default function AboutUs() {
 
           <ul>
             <li>Acid, amine, NCO & epoxy value testing</li>
-            <li>Electrical & manual balances</li>
-            <li>Laboratory ovens</li>
-            <li>Heating mantles & hot plates</li>
-            <li>Glass reactors for product development</li>
-            <li>Viscosity, density & boiling range testing</li>
+            <li>Viscosity, density & boiling range analysis</li>
+            <li>Glass reactors for formulation development</li>
+            <li>Laboratory ovens, balances & heating systems</li>
           </ul>
         </div>
       </div>
 
       {/* =====================
-          Gallery (REAL IMAGES)
+          Gallery
       ===================== */}
       <div className="about-gallery">
         <div className="gallery-item">
-          <img src={Facility} alt="Company Entrance" />
+          <img src={Company} alt="Company Premises" />
           <span>Company Premises</span>
         </div>
 
@@ -116,5 +136,5 @@ export default function AboutUs() {
         </div>
       </div>
     </section>
-  );
+  )
 }
