@@ -35,7 +35,7 @@
 .director-role {
   display: block;
   margin-bottom: 1.2rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--primary);
 }

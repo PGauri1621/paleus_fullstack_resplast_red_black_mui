@@ -99,7 +99,7 @@ export default function Team() {
                   Director
                 </Typography>
 
-                <Typography variant="body2">
+                <Typography variant="body1">
               Mr. Santosh V Kale is the Director of Divija specialty polymers, proving focused leadership in specialty polymers, PU Hardeners, coatings and adhesive systems. Under his Direction, the company has developed a fully equipped manufacturing, R & D and Quality control facility at Khudus near Akluj solapur.                                                                                                           His emphasis on product quality, customized solutions, and process reliability 
               has positioned the company as a dependable partner for customers across industrial and decorative applications segments.
                 </Typography>
@@ -128,7 +128,7 @@ export default function Team() {
                 <Typography variant="h6" component="h4">
                   Industry Recognition
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body1">
                  Divija specialty polymers has received industry recognition for its commitment to quality, innovation, 
                  and customer focused solutions, reflecting strong leadership and technical excellence.
                 </Typography>
