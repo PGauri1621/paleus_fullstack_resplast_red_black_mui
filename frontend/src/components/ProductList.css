@@ -1,24 +1,25 @@
 .products-page {
   display: flex;
-  padding: 5rem 6rem;
+  padding: 4rem 5rem;
   background: #f6f6f6;
 }
 
+/* ================= Sidebar ================= */
 .products-sidebar {
-  width: 260px;
-  margin-right: 3.5rem;
+  width: 240px;
+  margin-right: 2.5rem;
 }
 
 .sidebar-card {
   background: #ffffff;
   border-radius: 6px;
-  padding: 1.2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-link {
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.4rem;
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 0.3rem;
   font-size: 0.95rem;
   border-radius: 4px;
   cursor: pointer;
@@ -40,64 +41,93 @@
   font-weight: 600;
 }
 
+/* ================= Content ================= */
 .products-content {
   flex: 1;
 }
 
+/* Product Card */
 .product-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.7rem 2rem;
-  margin-bottom: 1.4rem;
+  padding: 1.3rem 1.6rem;
+  margin-bottom: 1rem;
   border-radius: 6px;
   border: 1px solid #e5e5e5;
   background: #ffffff;
+  transition: all 0.2s ease;
 }
 
+.product-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Left Content */
 .product-left h6 {
+  font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   color: #c4161c;
 }
 
 .product-left p {
   color: #555;
-  max-width: 540px;
+  max-width: 500px;
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
 
+/* Button */
 .download-btn {
   color: #c4161c !important;
   border-color: #c4161c !important;
+  white-space: nowrap;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
 }
 
 .download-btn:hover {
   background: rgba(196, 22, 28, 0.05);
 }
 
+/* Load More */
 .load-more {
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
   text-align: center;
 }
 
 .load-more button {
   color: #c4161c;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
+/* ================= Responsive ================= */
 @media (max-width: 900px) {
   .products-page {
     flex-direction: column;
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .products-sidebar {
     width: 100%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .sidebar-card {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+
+  .product-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .download-btn {
+    align-self: flex-start;
   }
 }
