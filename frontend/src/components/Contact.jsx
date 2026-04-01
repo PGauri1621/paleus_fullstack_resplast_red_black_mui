@@ -71,8 +71,8 @@ export default function Contact() {
       <div className="contact-header">
         <h2>Contact Us</h2>
         <p>
-          Reach out to us for product inquiries, technical support, or customized
-          polymer solutions. Our team will get back to you promptly.
+          Reach out to us for product inquiries, technical support or customized polymer solutions, 
+          our team will get back to you promptly.
         </p>
       </div>
 
@@ -82,17 +82,14 @@ export default function Contact() {
           <div className="info-block">
             <strong>Registered Office</strong>
             <p>
-              D-301, 3rd Floor, Grand Orchid Apartment,<br />
-              Opp. Kirloskar Chiller Company,<br />
-              Saswad Tal-Purandar, Pune – 412301
+             GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur Pin-413113, Maharashtra, India.
             </p>
           </div>
 
           <div className="info-block">
             <strong>Manufacturing Unit</strong>
             <p>
-              Gut No. 180/1/B/3, Khudus (Akluj),<br />
-              Tal-Malshiras, Dist-Solapur – 413113
+             GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur Pin-413113, Maharashtra, India.
             </p>
           </div>
 
@@ -109,6 +106,20 @@ export default function Contact() {
             <p>
               kale_dv@rediffmail.com<br />
               santoshkale985@gmail.com
+            </p>
+          </div>
+
+          <div className="info-block">
+            <strong>GSTIN</strong>
+            <p>
+              27BOCPK7849Q1Z1
+            </p>
+          </div>
+
+          <div className="info-block">
+            <strong>Website</strong>
+            <p>
+              www.divijapolymers.co.in
             </p>
           </div>
         </div>
