@@ -10,7 +10,7 @@ export default function Hero() {
       className="hero"
       style={{
         backgroundImage: `
-          linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
           url(${hero})
         `,
       }}
