@@ -15,7 +15,7 @@ const productBrochures = [
     title: 'Acrylic Resins',
     description:
       'TPA, TSA and PU-based acrylic resin systems used in paints, coatings, inks and specialty applications.',
-    pdf: '/pdfs/pdf - TPA, TSA PU Acrylic Resins.pdf',
+    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
   },
   {
     title: 'Alkyd Resins',
@@ -87,7 +87,7 @@ const productBrochures = [
     title: 'UPR & Saturated Polyester Resins',
     description:
       'Unsaturated and saturated polyester resins used in industrial and specialty applications.',
-    pdf: '/pdfs/pdf - TPA, TSA & PU Acrylic resins.pdf',
+    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
   },
   {
     title: 'Emulsions & Binders',
@@ -99,13 +99,13 @@ const productBrochures = [
     title: 'Acrylic Thickeners',
     description:
       'Acrylic thickener systems developed for paints and ink formulations.',
-    pdf: '/pdfs/pdf - TPA, TSA & PU Acrylic resins.pdf',
+    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
   },
   {
     title: 'Wax Dispersion Agents',
     description:
       'Water-based and solvent-based wax dispersions for improved surface performance.',
-    pdf: '/pdfs/pdf - TPA, TSA & PU Acrylic resins.pdf',
+    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
   },
   {
     title: 'Fabric Glues & Adhesives',
