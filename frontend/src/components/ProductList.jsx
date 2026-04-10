@@ -15,7 +15,7 @@ const productBrochures = [
     title: 'Acrylic Resins',
     description:
       'TPA, TSA and PU-based acrylic resin systems used in paints, coatings, inks and specialty applications.',
-    pdf: '/pdfs/pdf - TPA, TSA PU Acrylic resins.pdf',
+    pdf: '/pdfs/pdf - TPA, TSA PU Acrylic Resins.pdf',
   },
   {
     title: 'Alkyd Resins',
