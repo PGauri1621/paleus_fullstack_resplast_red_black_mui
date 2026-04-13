@@ -12,133 +12,79 @@ import './ProductList.css'
 /* ---------------- BROCHURES ---------------- */
 const productBrochures = [
   {
-    title: 'Acrylic Resins',
+    title: 'Isocynate Hardners',
     description:
-      'TPA, TSA and PU-based acrylic resin systems used in paints, coatings, inks and specialty applications.',
+      'Isocynate Hardners',
+    pdf: '/pdfs/pdf - Isocynate Hardners.pdf',
+  },
+  {
+    title: 'TPA, TSA, PU Acrylic Resins',
+    description:
+      'TPA, TSA, PU Acrylic Resins',
     pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
   },
   {
     title: 'Alkyd Resins',
     description:
-      'High-performance alkyd resins developed for industrial paint and coating formulations.',
+      'Alkyd Resins',
     pdf: '/pdfs/pdf - Alkyd Resins.pdf',
   },
   {
-    title: 'Aromatic PU Hardeners',
+    title: 'Epoxy Hardeners',
     description:
-      'Aromatic polyurethane hardeners (L 75) designed for durable industrial coating systems.',
-    pdf: '/pdfs/pdf - Isocynate Hardners.pdf',
-  },
-  {
-    title: 'Aliphatic PU Hardeners',
-    description:
-      'Aliphatic polyurethane hardeners (N 75) offering excellent weather and UV resistance.',
+      'Epoxy Hardners',
     pdf: '/pdfs/pdf - epoxy hardner.pdf',
   },
   {
-    title: 'Blocked Isocyanides',
+    title: 'Construction chemicals',
     description:
-      'Blocked isocyanides available in 100% and 63% grades for controlled curing applications.',
-    pdf: '/pdfs/pdf - epoxy hardner.pdf',
-  },
-  {
-    title: 'Epoxy Polyamide Hardeners',
-    description:
-      'Polyamide hardeners used in epoxy coatings, flooring, adhesives and protective systems.',
-    pdf: '/pdfs/pdf - epoxy hardner.pdf',
-  },
-  {
-    title: 'Epoxy Cycloaliphatic Hardeners',
-    description:
-      'Cycloaliphatic epoxy hardeners offering superior chemical resistance and performance.',
-    pdf: '/pdfs/pdf - epoxy hardner.pdf',
+      'Construction chemicals',
+    pdf: '/pdfs/pdf - construction chemicals.pdf',
   },
   {
     title: 'Amino Resins',
     description:
-      'Amino resin systems formulated for specialized coating and adhesive applications.',
-    pdf: '/pdfs/pdf - Alkyd Resins.pdf',
-  },
-  {
-    title: 'PU Resins for Inks',
-    description:
-      'Polyurethane resins specifically designed for ink formulations and printing applications.',
-    pdf: '/pdfs/pdf - Alkyd Resins.pdf',
-  },
-  {
-    title: 'PU Adhesives (1K)',
-    description:
-      'Single-component polyurethane adhesive systems for industrial and construction use.',
+      'Amino Resins',
     pdf: '/pdfs/pdf - Amino Resins.pdf',
   },
   {
-    title: 'PU Paints (1K)',
+    title: 'Ketonic Resins',
     description:
-      'One-component polyurethane paint systems delivering durability and performance.',
-    pdf: '/pdfs/pdf - Amino Resins.pdf',
+      'Ketonic Resins',
+    pdf: '/pdfs/pdf - Ketonic Resins.pdf',
+  },
+  {
+    title: 'Speciality Products',
+    description:
+      'Speciality Products',
+    pdf: '/pdfs/pdf - Speciality Products.pdf',
   },
   {
     title: 'Industrial Paints & Thinners',
     description:
-      'Comprehensive range of industrial paints along with compatible thinners.',
-    pdf: '/pdfs/pdf - industrial paints & thinners.pdf',
+      'Industrial Paints & Thinners',
+    pdf: '/pdfs/pdf - Industrial paints & thinners.pdf',
   },
   {
-    title: 'UPR & Saturated Polyester Resins',
+    title: 'PVC Solvent',
     description:
-      'Unsaturated and saturated polyester resins used in industrial and specialty applications.',
-    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
+      'PVC Solvent',
+    pdf: '/pdfs/pdf - PVC Solvent cements.pdf',
   },
   {
-    title: 'Emulsions & Binders',
+    title: 'Clear coats & Laquers',
     description:
-      'Styrene acrylic and pure acrylic emulsions for water-based paints and inks.',
-    pdf: '/pdfs/pdf - epoxy hardner.pdf',
-  },
-  {
-    title: 'Acrylic Thickeners',
-    description:
-      'Acrylic thickener systems developed for paints and ink formulations.',
-    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
-  },
-  {
-    title: 'Wax Dispersion Agents',
-    description:
-      'Water-based and solvent-based wax dispersions for improved surface performance.',
-    pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
-  },
-  {
-    title: 'Fabric Glues & Adhesives',
-    description:
-      'Adhesive solutions designed for fabric bonding and specialty applications.',
-    pdf: '/pdfs/pdf - Amino Resins.pdf',
-  },
-  {
-    title: 'Industrial & Automotive Clear Coats',
-    description:
-      'Clear coat systems available in 1K and 2K for industrial and automotive applications.',
+      'Clear coats & Laquers',
     pdf: '/pdfs/pdf - clear coats & laquers.pdf',
   },
   {
-    title: 'Aluminium Coating Clear Coats',
+    title: 'Floor Coatings',
     description:
-      '1K clear coat systems developed for aluminium coating at construction sites.',
-    pdf: '/pdfs/pdf - clear coats & laquers.pdf',
+      'Floor Coatings',
+    pdf: '/pdfs/pdf - floor coating.pdf',
   },
-  {
-    title: 'Epoxy Adhesives & Grouts',
-    description:
-      '2K and 3K epoxy adhesive and grout systems for demanding industrial applications.',
-    pdf: '/pdfs/pdf - epoxy hardner.pdf',
-  },
-  {
-    title: 'Specialty Products',
-    description:
-      'Custom-developed specialty products tailored to specific end-use requirements.',
-    pdf: '/pdfs/pdf - Specialty Products.pdf',
-  },
-]
 
+]
 
 /* ---------------- TECHNICAL DATA SHEETS ---------------- */
 const technicalDataSheets = [
