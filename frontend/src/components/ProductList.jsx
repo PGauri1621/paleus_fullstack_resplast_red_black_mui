@@ -14,76 +14,75 @@ const productBrochures = [
   {
     title: 'Isocynate Hardners',
     description:
-      'Isocynate Hardners',
+      'High-performance isocyanate hardeners designed to enhance durability, adhesion, and chemical resistance in coatings.',
     pdf: '/pdfs/pdf - Isocynate Hardners.pdf',
   },
   {
     title: 'TPA, TSA, PU Acrylic Resins',
     description:
-      'TPA, TSA, PU Acrylic Resins',
+      'Versatile resin systems offering excellent gloss, flexibility, and weather resistance for industrial and decorative coatings.',
     pdf: '/pdfs/pdf - TPA, TSA, PU Acrylic Resins.pdf',
   },
   {
     title: 'Alkyd Resins',
     description:
-      'Alkyd Resins',
+      'Reliable alkyd resins known for superior film formation, gloss retention, and ease of application in coatings.',
     pdf: '/pdfs/pdf - Alkyd Resins.pdf',
   },
   {
     title: 'Epoxy Hardeners',
     description:
-      'Epoxy Hardners',
+      'Advanced epoxy hardeners providing strong bonding, chemical resistance, and long-lasting protective finishes.',
     pdf: '/pdfs/pdf - epoxy hardner.pdf',
   },
   {
     title: 'Construction chemicals',
     description:
-      'Construction chemicals',
+      'Comprehensive range of construction chemicals for enhanced strength, durability, and performance of structures.',
     pdf: '/pdfs/pdf - construction chemicals.pdf',
   },
   {
     title: 'Amino Resins',
     description:
-      'Amino Resins',
+      'High-quality amino resins delivering excellent hardness, chemical resistance, and surface finish.',
     pdf: '/pdfs/pdf - Amino Resins.pdf',
   },
   {
     title: 'Ketonic Resins',
     description:
-      'Ketonic Resins',
+      'Fast-drying ketonic resins ideal for improving gloss, adhesion, and flexibility in coatings and inks.',
     pdf: '/pdfs/pdf - Ketonic Resins.pdf',
   },
   {
     title: 'Speciality Products',
     description:
-      'Speciality Products',
+      'Innovative specialty chemicals tailored to meet unique industrial performance and application requirements.',
     pdf: '/pdfs/pdf - Speciality Products.pdf',
   },
   {
     title: 'Industrial Paints & Thinners',
     description:
-      'Industrial Paints & Thinners',
+      'Durable industrial paints and high-quality thinners designed for optimal finish and application efficiency.',
     pdf: '/pdfs/pdf - Industrial paints & thinners.pdf',
   },
   {
     title: 'PVC Solvent',
     description:
-      'PVC Solvent',
+      'Effective PVC solvent cements ensuring strong bonding and leak-proof joints in piping systems.',
     pdf: '/pdfs/pdf - PVC Solvent cements.pdf',
   },
   {
     title: 'Clear coats & Laquers',
     description:
-      'Clear coats & Laquers',
+      'Premium clear coats and lacquers providing superior gloss, protection, and smooth finishing.',
     pdf: '/pdfs/pdf - clear coats & laquers.pdf',
   },
   {
     title: 'Floor Coatings',
     description:
-      'Floor Coatings',
+      'Robust floor coating solutions offering excellent abrasion resistance, durability, and aesthetic appeal.',
     pdf: '/pdfs/pdf - floor coating.pdf',
   },
-
 ]
 
 /* ---------------- TECHNICAL DATA SHEETS ---------------- */
