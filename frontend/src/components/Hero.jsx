@@ -17,7 +17,7 @@ export default function Hero() {
     >
       <div className="hero-box">
         <h1>
-          Delivering environmentally sustainable acrylic polymer system
+          Delivering environmentally sustainable polymer
           solutions
         </h1>
 
