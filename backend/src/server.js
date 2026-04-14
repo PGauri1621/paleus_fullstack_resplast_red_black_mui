@@ -13,7 +13,7 @@ app.use(express.json())
 app.use('/api/contact', contactRoute)
 
 app.get('/', (_, res) => {
-  res.send('Contact API running')
+  res.send('Contact API running') //updated email address of stakeholder
 })
 
 const PORT = process.env.PORT || 5000
