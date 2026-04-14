@@ -9,8 +9,8 @@ export const sendContactMail = async ({
   message,
 }) => {
   await resend.emails.send({
-    from: 'Website Contact <onboarding@resend.dev>', // temporary sender
-    to: process.env.CONTACT_RECEIVER,
+    from: 'onboarding@resend.dev',
+    to: 'gauriparvate@gmail.com',
     reply_to: email,
     subject: `New Contact Inquiry – ${name}`,
     html: `
