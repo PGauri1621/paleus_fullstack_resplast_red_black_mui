@@ -28,7 +28,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        'https://paleus-fullstack-resplast-red-black-mui.onrender.com/api/contact',
+        'https://paleus-fullstack-resplast-red-black-mui-5.onrender.com/api/contact',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
