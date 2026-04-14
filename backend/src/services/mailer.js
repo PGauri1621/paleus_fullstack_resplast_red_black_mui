@@ -1,4 +1,6 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendContactMail = async ({
   name,
@@ -6,20 +8,10 @@ export const sendContactMail = async ({
   phone,
   message,
 }) => {
-  const transporter = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-    port: process.env.MAIL_PORT,
-    secure: process.env.MAIL_PORT == 465,
-    auth: {
-      user: process.env.MAIL_USER,
-      pass: process.env.MAIL_PASS,
-    },
-  })
-
-  const mailOptions = {
-    from: `"Website Contact" <${process.env.MAIL_USER}>`,
+  await resend.emails.send({
+    from: 'Website Contact <onboarding@resend.dev>', // temporary sender
     to: process.env.CONTACT_RECEIVER,
-    replyTo: email,
+    reply_to: email,
     subject: `New Contact Inquiry – ${name}`,
     html: `
       <h3>New Contact Inquiry</h3>
@@ -29,7 +21,5 @@ export const sendContactMail = async ({
       <p><strong>Message:</strong></p>
       <p>${message}</p>
     `,
-  }
-
-  await transporter.sendMail(mailOptions)
+  })
 }
