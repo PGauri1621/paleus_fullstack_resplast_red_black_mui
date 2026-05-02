@@ -9,10 +9,15 @@ export const sendContactMail = async ({
   message,
 }) => {
   await resend.emails.send({
-    from: 'onboarding@resend.dev',
-    to: 'gauriparvate@gmail.com',
+
+    from: 'Divija Polymers <contact@send.divijapolymers.co.in>',
+
+    to: 'kale_dv@rediffmail.com',
+
     reply_to: email,
+
     subject: `New Contact Inquiry – ${name}`,
+
     html: `
       <h3>New Contact Inquiry</h3>
       <p><strong>Name:</strong> ${name}</p>

@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './Contact.css'
 
+const API_URL =
+  process.env.REACT_APP_API_URL ||
+  'https://paleus-fullstack-resplast-red-black-mui-7.onrender.com/api/contact'
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,17 +28,31 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus({
+        loading: false,
+        success: false,
+        message: 'Please fill all required fields.',
+      })
+      return
+    }
+
     setStatus({ loading: true, success: null, message: '' })
 
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 15000)
+
     try {
-      const response = await fetch(
-        'https://paleus-fullstack-resplast-red-black-mui-5.onrender.com/api/contact',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        }
-      )
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+        signal: controller.signal,
+      })
+
+      clearTimeout(timeoutId)
 
       const data = await response.json()
 
@@ -55,13 +73,22 @@ export default function Contact() {
         phone: '',
         message: '',
       })
+
+      // Auto clear success message
+      setTimeout(() => {
+        setStatus({ loading: false, success: null, message: '' })
+      }, 4000)
+
     } catch (error) {
+      clearTimeout(timeoutId)
+
       setStatus({
         loading: false,
         success: false,
         message:
-          error.message ||
-          'Unable to send message. Please try again later.',
+          error.name === 'AbortError'
+            ? 'Server is taking too long. Please try again.'
+            : error.message || 'Unable to send message.',
       })
     }
   }
@@ -71,25 +98,27 @@ export default function Contact() {
       <div className="contact-header">
         <h2>Contact Us</h2>
         <p>
-          Reach out to us for product inquiries, technical support or customized polymer solutions, 
+          Reach out to us for product inquiries, technical support or customized polymer solutions,
           our team will get back to you promptly.
         </p>
       </div>
 
       <div className="contact-grid">
-        {/* Contact Information */}
+        {/* Contact Info */}
         <div className="contact-info">
           <div className="info-block">
             <strong>Registered Office</strong>
             <p>
-             GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur Pin-413113, Maharashtra, India.
+              GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur
+              Pin-413113, Maharashtra, India.
             </p>
           </div>
 
           <div className="info-block">
             <strong>Manufacturing Unit</strong>
             <p>
-             GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur Pin-413113, Maharashtra, India.
+              GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur
+              Pin-413113, Maharashtra, India.
             </p>
           </div>
 
@@ -111,16 +140,12 @@ export default function Contact() {
 
           <div className="info-block">
             <strong>GSTIN</strong>
-            <p>
-              27BOCPK7849Q1Z1
-            </p>
+            <p>27BOCPK7849Q1Z1</p>
           </div>
 
           <div className="info-block">
             <strong>Website</strong>
-            <p>
-              www.divijapolymers.co.in
-            </p>
+            <p>www.divijapolymers.co.in</p>
           </div>
         </div>
 
@@ -178,12 +203,16 @@ export default function Contact() {
           <button
             type="submit"
             className="contact-submit"
-            disabled={status.loading}
+            disabled={
+              status.loading ||
+              !formData.name ||
+              !formData.email ||
+              !formData.message
+            }
           >
             {status.loading ? 'Sending...' : 'Submit Inquiry'}
           </button>
 
-          {/* Feedback message */}
           {status.message && (
             <p
               className={`form-status ${

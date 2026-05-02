@@ -7,15 +7,28 @@ dotenv.config()
 
 const app = express()
 
-app.use(cors())
+// ✅ CORS configuration (UPDATED)
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://divijapolymers.co.in",
+    "https://www.divijapolymers.co.in"
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}))
+
+// ✅ Middleware
 app.use(express.json())
 
+// ✅ Routes
 app.use('/api/contact', contactRoute)
 
 app.get('/', (_, res) => {
   res.send('Contact API running') 
 })
 
+// ✅ Server start
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () =>
   console.log(`Server running on port ${PORT}`)
