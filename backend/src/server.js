@@ -7,16 +7,32 @@ dotenv.config()
 
 const app = express()
 
-// ✅ CORS configuration (UPDATED)
+// ✅ Allowed origins (ADD your Netlify URL here)
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://splendid-madeleine-3c36d9.netlify.app", // 👈 IMPORTANT
+  "https://divijapolymers.co.in",
+  "https://www.divijapolymers.co.in"
+]
+
+// ✅ CORS configuration (FIXED)
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://divijapolymers.co.in",
-    "https://www.divijapolymers.co.in"
-  ],
-  methods: ["GET", "POST"],
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true)
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true)
+    } else {
+      return callback(new Error("Not allowed by CORS"))
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
   credentials: true
 }))
+
+// ✅ Handle preflight properly
+app.options('*', cors())
 
 // ✅ Middleware
 app.use(express.json())
