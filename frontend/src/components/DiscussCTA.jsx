@@ -7,8 +7,8 @@ export default function DiscussCTA() {
     <section className="discuss-cta">
       <div className="discuss-inner">
         <h2>
-          Do you have an acrylic polymer emulsion or PSA requirement that you
-          would like to discuss?
+          Do you have a polymer system requirement you
+          would like to discuss with us?
         </h2>
 
         {/* Navigate to Contact page */}
