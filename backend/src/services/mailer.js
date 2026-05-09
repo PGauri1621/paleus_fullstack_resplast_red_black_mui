@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-console.log('RESEND API KEY:', process.env.RESEND_API_KEY)
-
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendContactMail = async ({
@@ -11,12 +9,16 @@ export const sendContactMail = async ({
   message,
 }) => {
   try {
-    console.log('Sending email...')
+    console.log('========== EMAIL REQUEST ==========')
+    console.log('Name:', name)
+    console.log('Email:', email)
+    console.log('Phone:', phone)
+    console.log('Message:', message)
 
-    const data = await resend.emails.send({
-      from: 'Divija Polymers <contact@divijapolymers.co.in>',
+    const response = await resend.emails.send({
+      from: 'onboarding@resend.dev',
 
-      to: ['kale_dv@rediffmail.com'],
+      to: ['gauriparvate@gmail.com'],
 
       reply_to: email,
 
@@ -26,22 +28,20 @@ export const sendContactMail = async ({
         <h2>New Contact Inquiry</h2>
 
         <p><strong>Name:</strong> ${name}</p>
-
         <p><strong>Email:</strong> ${email}</p>
-
         <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
-
         <p><strong>Message:</strong></p>
-
         <p>${message}</p>
       `,
     })
 
-    console.log('RESEND SUCCESS:', data)
+    console.log('========== RESEND RESPONSE ==========')
+    console.log(response)
 
-    return data
+    return response
   } catch (error) {
-    console.error('RESEND ERROR:', error)
+    console.log('========== RESEND ERROR ==========')
+    console.error(error)
 
     throw error
   }
