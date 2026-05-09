@@ -30,12 +30,15 @@ export default function Contact() {
     e.preventDefault()
 
     // Basic validation
+    console.log('API URL:', API_URL)
+    console.log('Sending form:', formData)
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({
         loading: false,
         success: false,
         message: 'Please fill all required fields.',
       })
+      console.log('Response status:', response.status)
       return
     }
 
