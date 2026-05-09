@@ -8,23 +8,36 @@ export const sendContactMail = async ({
   phone,
   message,
 }) => {
-  await resend.emails.send({
+  try {
+    const data = await resend.emails.send({
+      from: 'Divija Polymers <contact@divijapolymers.co.in>',
 
-    from: 'Divija Polymers <contact@send.divijapolymers.co.in>',
+      to: ['kale_dv@rediffmail.com'],
 
-    to: 'kale_dv@rediffmail.com',
+      reply_to: email,
 
-    reply_to: email,
+      subject: `New Contact Inquiry – ${name}`,
 
-    subject: `New Contact Inquiry – ${name}`,
+      html: `
+        <h2>New Contact Inquiry</h2>
 
-    html: `
-      <h3>New Contact Inquiry</h3>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message}</p>
-    `,
-  })
+        <p><strong>Name:</strong> ${name}</p>
+
+        <p><strong>Email:</strong> ${email}</p>
+
+        <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+
+        <p><strong>Message:</strong></p>
+
+        <p>${message}</p>
+      `,
+    })
+
+    console.log('RESEND SUCCESS:', data)
+
+    return data
+  } catch (error) {
+    console.error('RESEND ERROR:', error)
+    throw error
+  }
 }
