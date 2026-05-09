@@ -9,29 +9,29 @@ export const sendContactMail = async ({
   message,
 }) => {
   try {
-    console.log('========== EMAIL REQUEST ==========')
-    console.log('Name:', name)
-    console.log('Email:', email)
-    console.log('Phone:', phone)
-    console.log('Message:', message)
-
     const response = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Divija Polymers <contact@send.divijapolymers.co.in>',
 
-      to: ['gauriparvate@gmail.com'],
+      to: ['kale_dv@rediffmail.com'],
 
       reply_to: email,
 
       subject: `New Contact Inquiry – ${name}`,
 
       html: `
-        <h2>New Contact Inquiry</h2>
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <h2>New Contact Inquiry</h2>
 
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+          <p><strong>Name:</strong> ${name}</p>
+
+          <p><strong>Email:</strong> ${email}</p>
+
+          <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+
+          <p><strong>Message:</strong></p>
+
+          <p>${message}</p>
+        </div>
       `,
     })
 
