@@ -12,7 +12,7 @@ export const sendContactMail = async ({
     const response = await resend.emails.send({
       from: 'Divija Polymers <contact@send.divijapolymers.co.in>',
 
-      to: ['kale_dv@rediffmail.com'],
+      to: [process.env.CONTACT_RECEIVER],
 
       reply_to: email,
 
@@ -35,12 +35,10 @@ export const sendContactMail = async ({
       `,
     })
 
-   // console.log('========== RESEND RESPONSE ==========')
-    console.log(response)
 
     return response
   } catch (error) {
-    console.log('========== RESEND ERROR ==========')
+  
     console.error(error)
 
     throw error
