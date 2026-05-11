@@ -36,12 +36,12 @@ export const sendContactMail = async ({
     })
 
    // console.log('========== RESEND RESPONSE ==========')
-    //console.log(response)
+    console.log(response)
 
     return response
   } catch (error) {
-    //console.log('========== RESEND ERROR ==========')
-   // console.error(error)
+    console.log('========== RESEND ERROR ==========')
+    console.error(error)
 
     throw error
   }
