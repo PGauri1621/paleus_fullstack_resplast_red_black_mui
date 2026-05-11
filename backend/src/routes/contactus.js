@@ -4,14 +4,12 @@ import { sendContactMail } from '../services/mailer.js'
 const router = express.Router()
 
 router.post('/', async (req, res) => {
-  console.log('========== CONTACT ROUTE HIT ==========')
-
-  console.log(req.body)
+ 
 
   const { name, email, phone, message } = req.body
 
   if (!name || !email || !message) {
-    console.log('VALIDATION FAILED')
+   
 
     return res.status(400).json({
       success: false,
@@ -20,7 +18,7 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    console.log('CALLING RESEND MAILER')
+  
 
     const response = await sendContactMail({
       name,
@@ -29,15 +27,14 @@ router.post('/', async (req, res) => {
       message,
     })
 
-    console.log('MAIL SENT SUCCESSFULLY')
-    console.log(response)
+   
 
     res.status(200).json({
       success: true,
       message: 'Message sent successfully',
     })
   } catch (error) {
-    console.log('MAILER FAILED')
+   
 
     console.error(error)
 
