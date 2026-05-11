@@ -9,8 +9,7 @@ const app = express()
 
 // ✅ Allowed origins (ADD your Netlify URL here)
 const allowedOrigins = [
-  "http://localhost:3000",
-  "https://splendid-madeleine-3c36d9.netlify.app", // 👈 IMPORTANT
+  "https://heartfelt-daffodil-0afade.netlify.app",
   "https://divijapolymers.co.in",
   "https://www.divijapolymers.co.in"
 ]

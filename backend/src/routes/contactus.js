@@ -4,7 +4,7 @@ import { sendContactMail } from '../services/mailer.js'
 const router = express.Router()
 
 router.post('/', async (req, res) => {
-  console.log('NEW BACKEND ACTIVE');
+  //console.log('NEW BACKEND ACTIVE');
   const { name, email, phone, message } = req.body
 
   // Basic validation
@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
       message: 'Message sent successfully',
     })
   } catch (error) {
-    console.error('Email error:', error)
+   // console.error('Email error:', error)
 
     res.status(500).json({
       success: false,
