@@ -73,13 +73,13 @@ export default function Team() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <Card elevation={0} className="director-card">
+              {/* <Card elevation={0} className="director-card">
                 <CardMedia
                   component="img"
                   image="/team/Mr.Kale.jpg"
                   alt="Mr. Santosh V Kale"
                 />
-              </Card>
+              </Card> */}
             </motion.div>
           </Grid>
 
@@ -143,13 +143,13 @@ export default function Team() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <Card elevation={0} className="award-card">
+              {/* <Card elevation={0} className="award-card">
                 <CardMedia
                   component="img"
                   image="/team/award.jpg"
                   alt="Industry award recognition"
                 />
-              </Card>
+              </Card> */}
             </motion.div>
           </Grid>
         </Grid>
