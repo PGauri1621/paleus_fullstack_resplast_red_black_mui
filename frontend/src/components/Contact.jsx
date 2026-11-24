@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './Contact.css'
 
 const API_URL =
-  process.env.REACT_APP_API_URL ||
-  'https://paleus-fullstack-resplast-red-black-mui-7.onrender.com/api/contact'
+  import.meta.env.VITE_API_URL ||
+  'http://localhost:5000/api/contact'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
