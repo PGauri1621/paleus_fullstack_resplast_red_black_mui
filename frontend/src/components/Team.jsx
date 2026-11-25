@@ -76,8 +76,8 @@ export default function Team() {
               {/* <Card elevation={0} className="director-card">
                 <CardMedia
                   component="img"
-                  image="/team/Mr.Kale.jpg"
-                  alt="Mr. Santosh V Kale"
+                 image="/logo.png"
+                  alt= "Mr. A. Sharma"
                 />
               </Card> */}
             </motion.div>
@@ -92,7 +92,7 @@ export default function Team() {
             >
               <Box className="director-content">
                 <Typography variant="h5" component="h3">
-                  Mr. Santosh V Kale
+                Mr. A. Sharma
                 </Typography>
 
                 <Typography className="director-role">

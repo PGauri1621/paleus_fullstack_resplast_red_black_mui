@@ -128,27 +128,27 @@ export default function Contact() {
           <div className="info-block">
             <strong>Phone</strong>
             <p>
-              +91 9172384724<br />
-              +91 8668902360
+              +91 98765 43210<br />
+              +91 98765 43211
             </p>
           </div>
 
           <div className="info-block">
             <strong>Email</strong>
             <p>
-              kale_dv@rediffmail.com<br />
-              santoshkale985@gmail.com
+              sales@example.com<br />
+              info@example.com
             </p>
           </div>
 
           <div className="info-block">
             <strong>GSTIN</strong>
-            <p>27BOCPK7849Q1Z1</p>
+            <p>00AAAAA0000A1Z0</p>
           </div>
 
           <div className="info-block">
             <strong>Website</strong>
-            <p>www.divijapolymers.co.in</p>
+            <p>www.example.com</p>
           </div>
         </div>
 

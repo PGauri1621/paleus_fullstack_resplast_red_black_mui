@@ -10,8 +10,8 @@ const app = express()
 // ✅ Allowed origins (ADD your Netlify URL here)
 const allowedOrigins = [
   "https://heartfelt-daffodil-0afade.netlify.app",
-  "https://divijapolymers.co.in",
-  "https://www.divijapolymers.co.in"
+  "https://example.com",
+  "https://www.example.com"
 ]
 
 // ✅ CORS configuration (FIXED)

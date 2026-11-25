@@ -10,7 +10,7 @@ export const sendContactMail = async ({
 }) => {
   try {
     const response = await resend.emails.send({
-      from: 'Divija Polymers <contact@divijapolymers.co.in>',
+      from: 'Example Polymers <contact@example.com>',
 
       to: [process.env.CONTACT_RECEIVER],
 
