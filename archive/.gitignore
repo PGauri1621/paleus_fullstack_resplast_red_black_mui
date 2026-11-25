@@ -1,0 +1,10 @@
+(
+echo node_modules/
+echo dist/
+echo .vite/
+echo .env
+echo .env.*
+echo !.env.example
+) > .gitignore
+(echo RESEND_API_KEY=your-key-here& echo CONTACT_RECEIVER=owner@example.com& echo PORT=5000) > backend\.env.example
+echo VITE_API_URL=http://localhost:5000/api/contact> frontend\.env.example
