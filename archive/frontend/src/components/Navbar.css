@@ -1,0 +1,54 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 6rem;          /* ⬆️ slightly increased for balance */
+  border-bottom: 1px solid #e5e5e5;
+  background: #ffffff;
+}
+
+/* Logo wrapper */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* 🔥 Increased logo size for readability */
+.logo img {
+  height: 56px;                 /* ⬅️ WAS 42px */
+  width: auto;
+  display: block;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Home icon */
+.home-link {
+  display: flex;
+  align-items: center;
+}
+
+.home-icon {
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+.home-link:hover .home-icon {
+  color: var(--primary);
+}
