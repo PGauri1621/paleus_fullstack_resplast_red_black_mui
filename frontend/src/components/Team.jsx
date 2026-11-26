@@ -54,7 +54,7 @@ export default function Team() {
           </Typography>
           <Typography variant="body1">
             Strong leadership and technical expertise form the foundation of
-            Divija Specialty Polymers, driving quality, innovation, and long-term
+            Example Polymers, driving quality, innovation, and long-term
             customer trust.
           </Typography>
         </motion.div>
@@ -100,7 +100,7 @@ export default function Team() {
                 </Typography>
 
                 <Typography variant="body1">
-              Mr. A Sharma is the Director of Divija specialty polymers, proving focused leadership in specialty polymers, PU Hardeners, coatings and adhesive systems. Under his Direction, the company has developed a fully equipped manufacturing, R & D and Quality control facility at Khudus near Akluj solapur.                                                                                                           His emphasis on product quality, customized solutions, and process reliability 
+              Mr. A Sharma is the Director of Example Polymers, proving focused leadership in specialty polymers, PU Hardeners, coatings and adhesive systems. Under his Direction, the company has developed a fully equipped manufacturing, R & D and Quality control facility at Khudus near Akluj solapur.                                                                                                           His emphasis on product quality, customized solutions, and process reliability 
               has positioned the company as a dependable partner for customers across industrial and decorative applications segments.
                 </Typography>
 
@@ -129,7 +129,7 @@ export default function Team() {
                   Industry Recognition
                 </Typography>
                 <Typography variant="body1">
-                 Divija specialty polymers has received industry recognition for its commitment to quality, innovation, 
+                 Example Polymers has received industry recognition for its commitment to quality, innovation, 
                  and customer focused solutions, reflecting strong leadership and technical excellence.
                 </Typography>
               </Box>

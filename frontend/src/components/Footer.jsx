@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="footer-brand">
             <img
               src={logo}
-              alt="Divija Speciality Polymers"
+              alt="Example Polymers"
               className="footer-logo"
             />
           </div>
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          © 2026 Divija Speciality Polymers · All rights reserved
+          © 2026 Example Polymers · All rights reserved
         </div>
       </footer>
 
@@ -60,7 +60,7 @@ export default function Footer() {
         <DialogTitle>Privacy Policy</DialogTitle>
         <DialogContent dividers>
           <Typography paragraph>
-            Divija Speciality Polymers respects your privacy and is committed to
+            Example Polymers respects your privacy and is committed to
             protecting any personal information you share with us.
           </Typography>
 
@@ -107,7 +107,7 @@ export default function Footer() {
 
           <Typography paragraph>
             All content on this website, including text, graphics, logos, and
-            documents, is the property of Divija Speciality Polymers and is
+            documents, is the property of Example Polymers and is
             protected by applicable intellectual property laws.
           </Typography>
 
@@ -118,7 +118,7 @@ export default function Footer() {
           </Typography>
 
           <Typography paragraph>
-            Divija Speciality Polymers shall not be liable for any direct or
+            Example Polymers shall not be liable for any direct or
             indirect damages arising from the use of this website or its
             content.
           </Typography>

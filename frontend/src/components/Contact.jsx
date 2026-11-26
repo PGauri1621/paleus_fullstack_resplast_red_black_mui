@@ -112,16 +112,16 @@ export default function Contact() {
           <div className="info-block">
             <strong>Registered Office</strong>
             <p>
-              GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur
-              Pin-413113, Maharashtra, India.
+              Akluj, Tal - Malsh, Dist - Sules
+              Pin-413443, Maharashtra, India.
             </p>
           </div>
 
           <div className="info-block">
             <strong>Manufacturing Unit</strong>
             <p>
-              GAT No. 180/1/b/3, Khudus(Akluj), Tal - Malshiras, Dist - Solapur
-              Pin-413113, Maharashtra, India.
+                Akluj, Tal - Malsh, Dist - Sules
+              Pin-413443, Maharashtra, India.
             </p>
           </div>
 
